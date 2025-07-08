@@ -3,14 +3,15 @@ import css from './MovieGrid.module.css'
 
 interface MovieGridProps {
     items: Movie[];
+    onSelect: (movie: Movie) => void;
 }
 
-export default function MovieGrid( {items} : MovieGridProps) {
+export default function MovieGrid( {items, onSelect} : MovieGridProps) {
     return (
         <ul className={css.grid}>
             {items.map((item) => (
                 <li key={item.id}>
-                <div className={css.card}>
+                    <div className={css.card} onClick={() => onSelect(item)}>
                   <img 
                         className={css.image} 
                         src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
