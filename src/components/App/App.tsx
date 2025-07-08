@@ -26,7 +26,6 @@ export default function App() {
         } else {
             setMovies(newMovies);
         }
-        console.log(newMovies);
         } catch {
             setIsError(true);
         }
