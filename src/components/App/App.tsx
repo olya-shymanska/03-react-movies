@@ -30,7 +30,7 @@ export default function App() {
             setIsError(true);
         }
         finally {
-            setIsLoading(true);
+            setIsLoading(false);
         }
     }
 
