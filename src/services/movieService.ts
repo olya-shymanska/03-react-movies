@@ -11,11 +11,11 @@ interface FetchMoviesResponse {
 };
 
 
-export default async function fetchMovies(topic: string) {
+export default async function fetchMovies(query: string): Promise<Movie[]> {
 
     const myParams: { params: FetchMoviesParams; headers: {Authorization: string}} = {
         params: {
-            query: topic,
+            query: query,
         },
         headers: {
             Authorization: `Bearer ${token}`,

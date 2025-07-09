@@ -40,7 +40,7 @@ export default function App() {
     return (
         <div className={css.app}>
             <SearchBar onSubmit={handleSearch} />
-            {isError ? <ErrorMessage /> : isLoading ? <Loader /> : <MovieGrid items={movies} onSelect={openModal} />}
+            {isError ? <ErrorMessage /> : isLoading ? <Loader /> : <MovieGrid movies={movies} onSelect={openModal} />}
             <Toaster />
            { selectedMovie && <MovieModal movie={selectedMovie} onClose ={closeModal} />}
         </div>
